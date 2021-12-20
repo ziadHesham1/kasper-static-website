@@ -1,0 +1,112 @@
+/*Global rules*/
+/*Global variables*/
+:root {
+    --main-color: #19c8fa;
+}
+/*End Global variables*/
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #262525;
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*End Global rules*/
+/*Header section*/
+header {
+
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+header .container img {
+    height: 40px;
+}
+
+header .container::after {
+    content: '';
+    position: absolute;
+    height: 1px;
+    background-color: #a2a2a2;
+    width: calc(100% - 30px);
+    left: 15px;
+    bottom: 0;
+}
+
+header .container nav {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+}
+
+header .container nav ul {
+    display: flex;
+
+}
+
+header .container nav ul li {
+    margin-left: 10px;
+
+}
+
+header .container nav ul li a {
+    color: white;
+    display: block;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 40px 10px;
+    transition: 0.3s;
+    position: relative;
+    z-index: 2;
+}
+
+header .container nav ul li a:hover,
+header .container nav ul li a:active {
+    color: var(--main-color);
+    border-bottom: 1px solid var(--main-color);
+}
+
+header .container nav .form {
+    width: 40px;
+    height: 30px;
+    position: relative;
+    margin-left: 30px;
+    border-left: 1px solid white;
+}
+
+header .container nav .form i {
+    color: white;
+    position: absolute;
+    font-size: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+}
+/*Header section*/
