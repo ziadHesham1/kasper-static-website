@@ -55,6 +55,7 @@ ul {
         width: 1170px;
     }
 }
+
 /*end of Responsive container*/
 
 
@@ -97,38 +98,42 @@ header .container nav {
 
 }
 
-header .container .toggle-menu{
+header .container .toggle-menu {
     font-size: 22px;
     color: white;
 }
+
 /*Small*/
 @media (min-width: 768px) {
-   header .container .toggle-menu{
-       display: none;
-   }
+    header .container .toggle-menu {
+        display: none;
+    }
 }
 
 header .container nav ul {
     display: flex;
 
 }
+
 /*Mobile*/
 @media (max-width: 767px) {
-    header .container nav ul{
+    header .container nav ul {
         display: none;
     }
-    header .container .toggle-menu:hover + ul{
+
+    header .container .toggle-menu:hover + ul {
         display: flex;
         flex-direction: column;
         position: absolute;
         top: 100%;
         left: 0;
-        background-color: #4E6F69;
+    background-color: rgb(0 0 0 / 50%);
         width: 100%;
     }
-        header .container .toggle-menu:hover + ul li a{
-            padding:15px;
-        }
+
+    header .container .toggle-menu:hover + ul li a {
+        padding: 15px;
+    }
 
 }
 
@@ -191,34 +196,92 @@ header .container nav .form i {
     height: 100%;
     background-color: rgb(0 0 0 /60%);
 }
-.landing .text{
+
+.landing .text {
     position: absolute;
     left: 0;
     top: 50%;
     transform: translateY(-50%);
     width: 50%;
     color: white;
-    padding:50px;
+    padding: 50px;
     background-color: var(--transparent-color);
     display: flex;
     justify-content: flex-end;
 
 }
 
+
 .landing .text .content {
     max-width: 500px;
 }
 
-.landing .text .content h2{
+@media (max-width: 767px) {
+    .landing .text {
+        width: 100%;
+    }
+
+    .landing .text .content {
+        max-width: 100%
+    }
+
+}
+
+.landing .text .content h2 {
     font-weight: normal;
     font-size: 32px;
     line-height: 1.5;
     margin-bottom: 20px;
 }
 
-.landing .text .content p{
+.landing .text .content p {
     font-size: 14px;
     line-height: 2;
+}
+
+.landing .change-background {
+    color: #ddd;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+}
+
+.landing .left-arrow {
+    left: 20px;
+}
+
+.landing .right-arrow {
+    right: 30px;
+}
+
+@media (max-width: 767px) {
+
+    .landing .left-arrow,
+    .landing .right-arrow {
+        display: none;
+    }
+}
+
+.landing .bullets {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    display: flex;
+
+}
+
+.landing .bullets li {
+    width: 20px;
+    height: 20px;
+    border: 1px solid white;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.landing .bullets li.active {
+    background-color: var(--main-color);
+    border-color: var(--main-color);
 }
 
 /*Landing section*/
