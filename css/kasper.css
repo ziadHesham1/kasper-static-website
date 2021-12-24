@@ -2,7 +2,9 @@
 /*Global variables*/
 :root {
     --main-color: #19c8fa;
+
     --transparent-color: rgb(15 116 143 /70%);
+    --paragraph-color: #777;
 }
 
 /*End Global variables*/
@@ -60,6 +62,60 @@ ul {
 
 
 /*End Global rules*/
+/*start components*/
+.section {
+    padding: 100px 0;
+}
+
+.section .main-heading {
+    text-align: center;
+    margin-bottom: 20px;
+
+}
+
+.section .main-heading h2 {
+    font-weight: normal;
+    font-size: 40px;
+    position: relative;
+    margin-bottom: 70px;
+    text-transform: uppercase;
+}
+
+.section .main-heading h2::before {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 120px;
+    background-color: #333;
+    left: 50%;
+    right: 0%;
+    bottom: -30px;
+    transform: translateX(-50%);
+}
+
+.section .main-heading h2::after {
+    content: "";
+    position: absolute;
+    transform: translateX(-50%);
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    border: 2px solid #333;
+    left: 50%;
+    bottom: -38px;
+    background-color: white;
+}
+
+.section .main-heading p {
+    width: 550px;
+    margin: 0 auto 100px;
+    line-height: 2;
+    color: var(--paragraph-color);
+}
+
+
+/*end components*/
+
 /*Header section*/
 header {
     position: absolute;
@@ -127,7 +183,7 @@ header .container nav ul {
         position: absolute;
         top: 100%;
         left: 0;
-    background-color: rgb(0 0 0 / 50%);
+        background-color: rgb(0 0 0 / 50%);
         width: 100%;
     }
 
@@ -268,6 +324,7 @@ header .container nav .form i {
     bottom: 30px;
     left: 50%;
     display: flex;
+    transform: translateX(-50%);
 
 }
 
@@ -284,10 +341,59 @@ header .container nav .form i {
     border-color: var(--main-color);
 }
 
-/*Landing section*/
-/*
+/*End Landing section*/
 
-Read me
-change menu background color
 
-*/
+/*services section*/
+
+.services .services-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+    grid-column-gap: 40px;
+    grid-row-gap: 60px;
+
+}
+
+.services .services-container .srv-box {
+    display: flex;
+    margin-bottom: 20px;
+    margin-right: 20px;
+
+}
+
+.services .services-container .srv-box i {
+    margin-right: 50px;
+}
+
+
+.services .services-container .srv-box .text {
+    line-height: 2;
+    flex: 1;
+    top: 0;
+    position: relative;
+
+}
+
+.services .services-container .srv-box .text h3 {
+    margin-bottom: 30px;
+    color: var(--main-color);
+}
+
+.services .services-container .srv-box .text p {
+    color: var(--paragraph-color);
+}
+
+/*Mobile*/
+@media (max-width: 767px) {
+    .services .services-container .srv-box {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        margin-bottom: 40px
+    }
+
+}
+
+/*NOTE: shof elvideo w zbt elly na2s*/
+
+/*end services section*/
