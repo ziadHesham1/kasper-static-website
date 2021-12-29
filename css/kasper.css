@@ -65,7 +65,7 @@ ul {
 /*start components*/
 .section {
     padding-top: 100px;
-    padding-bottom: 100px;
+    /*padding-bottom: 100px;*/
 }
 
 .section .main-heading {
@@ -238,7 +238,7 @@ header .container nav .form i {
 
 /*Landing section*/
 .landing {
-    background-image: url('../images/ia_100000014.jpg');
+    background-image: url('../images/landing.jpg');
     min-height: 100vh;
     background-color: #1f2021;
     background-size: cover;
@@ -401,11 +401,12 @@ header .container nav .form i {
 }
 
 /*end services section*/
-/*start design*/
+
+/*start design section*/
 
 .design {
     height: 600px;
-    background-image: url("../images/ia_100000015.jpg");
+    background-image: url("../images/design-features.jpg");
     background-size: cover;
     position: relative;
     display: flex;
@@ -450,7 +451,7 @@ header .container nav .form i {
 
 /*Mobile*/
 @media (max-width: 767px) {
-    .design .image{
+    .design .image {
         display: none;
     }
 
@@ -464,7 +465,7 @@ header .container nav .form i {
 }
 
 
-.design .text ul li{
+.design .text ul li {
     padding: 15px 0;
 }
 
@@ -478,8 +479,118 @@ header .container nav .form i {
     top: 1px;
 }
 
+/*end design section*/
 
-/*end design*/
+
+
+/*start portofolio section*/
+/*shuffle*/
+.shuffle {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 60px;
+}
+
+.shuffle li {
+    padding: 10px;
+}
+
+.shuffle li:first-child, .shuffle li:active, .shuffle li:hover {
+
+    background-color: var(--main-color);
+    color: white;
+}
+/*end shuffle*/
+
+/*box*/
+.box {
+    position: relative;
+    flex-basis: 25%;
+    overflow: hidden;
+
+}
+
+/*minimize flex basis for the box to 50% to make 2 pics only in the col
+when the screen is between small and medium*/
+@media (min-width: 768px) and (max-width: 991px) {
+    .box {
+        position: relative;
+        flex-basis: 50%;
+
+    }
+}
+/*minimize flex basis for the box to 100% to make 1 pic only in the col
+when the screen is smaller than small screen (mobile)*/
+@media (max-width: 767px) {
+    .box {
+        position: relative;
+        flex-basis: 100%;
+
+    }
+}
+/*end box*/
+
+/*caption*/
+.imgs-container .caption {
+    padding: 20px;
+    position: absolute;
+    width: 100%;
+    transition: 0.3s;
+    bottom: -100%;
+    background-color: white;
+
+}
+
+.imgs-container .caption h4 {
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+
+.imgs-container .caption p {
+    color: var(--main-color);
+}
+
+.imgs-container .box:hover .caption {
+    bottom: 0;
+}
+/*end caption*/
+
+/*imgs container*/
+.imgs-container {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.imgs-container .box:hover img {
+    transform: rotate(3deg) scale(1.1);
+        transition: 0.3s;
+
+}
+
+.imgs-container img {
+    max-width: 100%;
+}
+/*imgs container*/
+
+/*more*/
+.more{
+    background-color: var(--main-color);
+    text-decoration: none;
+    color: white;
+    display: block;
+    width: fit-content;
+   margin: 30px auto;
+    padding: 15px;
+    text-transform: uppercase;
+}
+/*end more*/
+/*end portofolio section*/
+
+
+
+
+
 
 /*footer section*/
 /*
