@@ -429,6 +429,7 @@ header .container nav .form i {
 
 }
 
+
 .design::before {
     content: '';
     position: absolute;
@@ -517,7 +518,7 @@ header .container nav .form i {
 /*end shuffle*/
 
 /*box*/
-.box {
+.portfolio .imgs-container .box {
     position: relative;
     flex-basis: 25%;
     overflow: hidden;
@@ -661,6 +662,119 @@ element.style {
 }
 
 /*end video section*/
+
+
+/*start about section*/
+
+.about {
+    overflow: hidden;
+    text-align: center;
+}
+
+.about img {
+    position: relative;
+    max-width: 100%;
+    bottom: -120px;
+    margin-top: -120px;
+}
+
+@media (max-width: 767px) {
+    .about img {
+        position: relative;
+        max-width: 100%;
+        bottom: -60px;
+        margin-top: -60px;
+    }
+}
+
+/*end about section*/
+
+
+/*start statistics section */
+
+.stats {
+    padding-bottom: 100px;
+    background-image: url(../images/stats.png);
+    background-size: cover;
+    position: relative;
+    text-align: center;
+
+}
+
+.stats::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0 0 0 /70%);
+}
+
+.stats .container {
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+
+}
+
+.stats .container .box {
+    color: white;
+    padding: 50px;
+    background-color: var(--transparent-color);
+
+}
+
+/*at mobile screens and smaller
+ make it one box in col*/
+@media (max-width: 767px) {
+    .stats .container .box {
+        flex-basis: 100%;
+    }
+}
+
+/*at small screens and larger
+ make it 2 boxes in col*/
+@media (min-width: 768px) {
+    .stats .container .box {
+        flex-basis: 50%;
+    }
+}
+
+/*at medium screens and larger
+ make it 4 boxes in col*/
+@media (min-width: 992px) {
+    .stats .container .box {
+        flex-basis: 25%;
+    }
+}
+
+
+.stats .container .box i {
+    color: white;
+    width: 40px;
+    height: 40px;
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    margin: 0 auto 30px;
+}
+
+.stats .container .number {
+    font-weight: bold;
+    font-size: 50px;
+    margin-bottom: 20px;
+
+}
+
+.stats .container p {
+    font-size: 14px;
+
+}
+
+/*start statistics section */
 
 /*footer section*/
 /*
